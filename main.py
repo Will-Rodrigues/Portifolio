@@ -3,11 +3,11 @@ from flask_bootstrap import Bootstrap
 import smtplib as smtp
 import os
 
-EMAIL = 'williamgabriel@outlook.com'  #os.environ.get('EMAIL')
-PASS =  '6okLV!vcdFfS2RJ$pnF7' #os.environ.get('MAIL_PASS')
+EMAIL = os.environ.get('EMAIL')
+PASS =  os.environ.get('MAIL_PASS')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'aseuhaseusheush' #os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap(app)
 
 @app.route('/', methods=['GET', 'POST'])
